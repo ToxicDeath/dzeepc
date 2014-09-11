@@ -12,7 +12,7 @@ briefing = 0;
 debriefing = 0;
 
 onPauseScript = "";
-loadScreen = "dayzbanner.jpg";
+loadScreen = "\z\addons\dayz_code\gui\dayz_logo_ca.paa";
 
 class Header
 {
@@ -52,16 +52,6 @@ class RscPicture
 	sizeEx=0;
 	lineSpacing=0;
 	text="";
-};
-class CfgSounds
-{
-    sounds[] = {siren};
-    class siren
-    {
-	name = "siren";
-	sound[] = {custom\sirens\siren.ogg,0.5,1};
-	titles[] = {};
-    };
 };
 class RscLoadingText : RscText
 {
@@ -158,5 +148,3 @@ class DayZ_loadingScreen
 		};
 	};
 };
-#include "custom\EVD\extra_rc.hpp"
-#include "custom\snap_pro\snappoints.hpp"
