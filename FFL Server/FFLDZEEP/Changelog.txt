@@ -1,0 +1,4 @@
+2014/09/12
+Initial release and merge with other mission file.
+Battle eye extended commands implemented.
+Infistar added to the mission .pbo

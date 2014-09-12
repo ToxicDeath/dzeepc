@@ -135,7 +135,7 @@ if (!isDedicated) then {
 //Login screen
 
 //astro Watermark
-	server_name = "SYOS"; 
+	server_name = "FFL"; 
 //astro Watermark
 
 
