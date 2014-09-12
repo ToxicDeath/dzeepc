@@ -9,12 +9,6 @@ class Mission
 		"dayz_code",
 		"dayz_communityassets",
 		"dayz_weapons",
-		"mbg_buildings_3",
-		"mbg_killhouses",
-		"mbg_african_buildings",
-		"aif_arma1buildings",
-		"kpfswaysigns",
-		"buildings3",
 		"dayz_equip",
 		"dayz_epoch",
 		"dayz_vehicles",
@@ -1178,7 +1172,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=19;
+		items=17;
 		class Item0
 		{
 			position[]={7839.6055,381.33774,8414.7324};
@@ -1301,116 +1295,139 @@ class Mission
 			type="mil_dot";
 			colorName="ColorBlue";
 		};
-			class Item17
-		{
-			position[]={13583.978, -38.601055, 2979.428};
-			name="Restricted0";
-			text="AI Military Emplacement";
-			markerType="ELLIPSE";
-			type="empty";
-			colorName="ColorRedFaded50";
-			a=750; //same as sensors Radius
-			b=600; //same as sensors Radius
-		};
-			class Item18
-		{
-			position[]={13583.978, -38.601055, 2979.428};
-			name="AI_Base";
-			text="AI Military Intsallation";
-			type="mil_dot";
-			colorName="ColorRed";
-		};
 	};
 	class Sensors
 	{
-		items=5;
+		items=9;
 		class Item0
 		{
-			position[]={6325.6772,304.99033,7807.7412};
-			a=100;
-			b=100;
-			activationBy="WEST";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			name="zonestary";
-			expCond="(player distance zonestary) < 100;";
-			expActiv="[""trader city Stary"",true,""enter""] spawn player_traderCity;";
-			expDesactiv="[""trader city Stary"",true,""leave""] spawn player_traderCity;";
-			class Effects
-			{
-			};
-		};
-		class Item1
-		{
-			position[]={4063.4226,365.00577,11664.19};
-			a=100;
-			b=100;
+			position[]={4053.8501,364.76645,11668.645};
 			activationBy="WEST";
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
 			name="zonebash";
-			expCond="(player distance zonebash) < 100;";
-			expActiv="[""trader city Bash"",true,""enter""] spawn player_traderCity;";
-			expDesactiv="[""trader city Bash"",true,""leave""] spawn player_traderCity;";
+			expCond="(player distance zonebash) < 75;";
+			expActiv="TitleText[""Now entering trader city Bash"",""PLAIN DOWN""]; canbuild = false;";
+			expDesactiv="TitleText[""Now leaving trader city Bash"",""PLAIN DOWN""]; canbuild = true;";
 			class Effects
 			{
+				soundDet="arabian_market_1";
 			};
 		};
-		class Item2
+		class Item1
 		{
-			position[]={11447.472,317.26886,11364.504};
-			a=100;
-			b=100;
+			position[]={11463.747,317.3078,11349.89};
 			activationBy="WEST";
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
 			name="zoneklen";
-			expCond="(player distance zoneklen) < 100;";
-			expActiv="[""trader city Klen"",true,""enter""] spawn player_traderCity;";
-			expDesactiv="[""trader city Klen"",true,""leave""] spawn player_traderCity;";
+			expCond="(player distance zoneklen) < 75;";
+			expActiv="TitleText[""Now entering trader city Klen"",""PLAIN DOWN""]; canbuild = false;";
+			expDesactiv="TitleText[""Now leaving trader city Klen"",""PLAIN DOWN""]; canbuild = true;";
 			class Effects
 			{
+				soundDet="arabian_market_1";
 			};
 		};
-		class Item3
+		class Item2
 		{
-			position[]={1606.6443,289.70795,7803.5156};
-			a=100;
-			b=100;
+			position[]={6325.6772,304.99033,7807.7412}; 
 			activationBy="WEST";
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
-			name="zonebandit";
-			expCond="(player distance zonebandit) < 100;";
-			expActiv="[""Bandit Trader"",false,""enter""] spawn player_traderCity;";
-			expDesactiv="[""Bandit Trader"",false,""leave""] spawn player_traderCity;";
+			name="zonestary";
+			expCond="(player distance zonestary) < 75;";
+			expActiv="TitleText[""Now entering trader city Stary"",""PLAIN DOWN""]; canbuild = false;";
+			expDesactiv="TitleText[""Now leaving trader city Stary"",""PLAIN DOWN""]; canbuild = true;";
 			class Effects
 			{
+				soundDet="arabian_market_1";
+			};
+		};
+        class Item3
+		{
+			position[]={4053.8501,364.76645,11668.645};
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="zonebash_safezone";
+			expCond="(player distance zonebash_safezone) < 150;";
+			expActiv="inSafeZone = true;";
+			expDesactiv="inSafeZone = false;";
+			class Effects
+			{
+				
 			};
 		};
 		class Item4
 		{
-			position[]={12944.227,210.19823,12766.889};
-			a=100;
-			b=100;
-			activationBy="WEST";
+			position[]={11463.747,317.3078,11349.89};
+			activationBy="ANY";
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
-			name="zonehero";
-			expCond="(player distance zonehero) < 100;";
-			expActiv="[""Hero Trader"",false,""enter""] spawn player_traderCity;";
-			expDesactiv="[""Hero Trader"",false,""leave""] spawn player_traderCity;";
+			name="zoneklen_safezone";
+			expCond="(player distance zoneklen_safezone) < 150;";
+			expActiv="inSafeZone = true;";
+			expDesactiv="inSafeZone = false;";
 			class Effects
 			{
+				
 			};
 		};
-		
 		class Item5
+		{
+			position[]={6325.6772,304.99033,7807.7412};
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="zonestary_safezone";
+			expCond="(player distance zonestary_safezone) < 150;";
+			expActiv="inSafeZone = true;";
+			expDesactiv="inSafeZone = false;";
+			class Effects
+			{
+				
+			};
+        };
+		class Item6
+		{
+			position[]={1606.6443,289.70795,7803.5156};
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="bandit_safezone";
+			expCond="(player distance bandit_safezone) < 150;";
+			expActiv="inSafeZone = true;";
+			expDesactiv="inSafeZone = false;";
+			class Effects
+			{
+				
+			};
+        };
+		class Item7
+		{
+			position[]={12944.227,210.19823,12766.889};
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="Hero_safezone";
+			expCond="(player distance Hero_safezone) < 150;";
+			expActiv="inSafeZone = true;";
+			expDesactiv="inSafeZone = false;";
+			class Effects
+			{
+				
+			};
+        };
+		class Item8
 		{
 			position[]={12060.471,158.85699,12638.533};
 			activationBy="ANY";
@@ -1426,29 +1443,10 @@ class Mission
 				
 			};
         };		
+		
 	};
 };
-class Intro
-{
-	addOns[]=
-	{
-		"chernarus"
-	};
-	addOnsAuto[]=
-	{
-		"chernarus"
-	};
-	randomSeed=6913869;
-	class Intel
-	{
-		startWeather=0.25;
-		forecastWeather=0.25;
-		year=2008;
-		month=10;
-		day=11;
-		hour=9;
-		minute=20;
-	};
+};
 };
 class OutroWin
 {
