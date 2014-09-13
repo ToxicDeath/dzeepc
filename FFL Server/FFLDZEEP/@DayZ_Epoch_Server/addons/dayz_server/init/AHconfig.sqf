@@ -6,10 +6,10 @@
 /*  Key to open the menu  */ _OpenMenuKey = 0x3C;    /* google DIK_KeyCodes (0x3C is F2) */
 /*  LOW ADMIN HERE        */ _LAdmins = ["0","0","0"]; //do not have a , at the end.
 /*  NORMAL ADMIN HERE     */ _NAdmins = ["0","0","0"]; //do not have a , at the end.
-/*  SUPER ADMIN HERE      */ _SAdmins = ["0","0","0"]; //do not have a , at the end.
+/*  SUPER ADMIN HERE      */ _SAdmins = ["ff3e8895d04c60f60678d567b9a8eefd","0","0"]; //do not have a , at the end.
 /*  BANNED PLAYER HERE    */ _BLOCKED = ["0","0","0"]; //do not have a , at the end.
 /* ********************************************************************************* */
-/*  Top esc menu TXT      */ _TopOfESC = "DayZ Server"; //do not use " in this text.
+/*  Top esc menu TXT      */ _TopOfESC = "FFL DayZ Epoch Server"; //do not use " in this text.
 /*  Bottom esc menu TXT   */ _LowerTop = "AntiHack / AdminTool"; //do not use " in this text.
 /*  Bottom esc menu TXT2  */ _LowerBottom = "by infiSTAR.de"; //do not use " in this text.
 /*  Color esc menu TXT    */ _EscColor = [0.6,0,0,1];
